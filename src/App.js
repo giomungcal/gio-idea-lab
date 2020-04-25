@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ScrollOut from "scroll-out";
 
 import fb from './imgs/fb.png';
 import github from './imgs/github.png';
@@ -11,6 +12,8 @@ import tree from './imgs/tree.png'
 import forest from './imgs/forest.png'
 
 const App = () => {
+
+  // Handles display of side navbar
 
   const [ nav, setNav ] = useState(true)
 
@@ -26,12 +29,14 @@ const App = () => {
     transform: "translateX(-30px)"
   };
 
-  const [ scroll, setScroll ] = useState(0);
-
   const handleNav = () => {
     setNav(!nav);
     console.log(nav);
   }
+
+  // Scroll Parallax 
+
+  const [ scroll, setScroll ] = useState(0);
 
   const scrollListener = () => {
     setScroll(window.scrollY);
@@ -46,41 +51,41 @@ const App = () => {
     }
   }, [scroll])
 
-    // lowgrass.style.top = value * .6 + 'px';
+  let idealabStyle = {
+    transform: "translateY(" + scroll * .65 + "px)"
+  }
 
-    // tree.style.top = value * .5 + 'px';
+  let forestStyle = {
+    transform: "translateY(" + scroll * .5 + "px)"
+  }
 
-    // gio.style.fontSize = 2 - value * .001 + "em";
-    // gio.style.transform = 'translateY(' + value * .68 + 'px)';
+  let midGrassStyle = {
+    transform: "translate3d(" + -scroll * .03 + "px, " + scroll * .5 +"px, 0px)"
+  }
 
-    let idealabStyle = {
-      transform: "translateY(" + scroll * .65 + "px)"
-    }
+  let smallGrassStyle = {
+    transform: "translate3d(" + scroll * .12 + "px, " + scroll * .65 +"px, 0px)"
+  }
 
-    let forestStyle = {
-      transform: "translateY(" + scroll * .5 + "px)"
-    }
+  let lowGrassStyle = {
+    transform: "translateY(" + scroll * .6 + "px)"
+  }
 
-    let midGrassStyle = {
-      transform: "translate3d(" + -scroll * .03 + "px, " + scroll * .5 +"px, 0px)"
-    }
+  let treeStyle = {
+    transform: "translateY(" + scroll * .5 + "px)"
+  }
 
-    let smallGrassStyle = {
-      transform: "translate3d(" + scroll * .12 + "px, " + scroll * .65 +"px, 0px)"
-    }
+  let gioStyle = {
+    transform: "translate3d(" + -scroll * .12 + "px, " + scroll * .68 +"px, 0px)"
+  }
 
-    let lowGrassStyle = {
-      transform: "translateY(" + scroll * .6 + "px)"
-    }
+  // Scroll-out effect
 
-    let treeStyle = {
-      transform: "translateY(" + scroll * .5 + "px)"
-    }
-
-    let gioStyle = {
-      transform: "translate3d(" + -scroll * .12 + "px, " + scroll * .68 +"px, 0px)"
-    }
-
+  useEffect(() => {
+    ScrollOut({
+      targets: '.quotes, .about_1, .about_2, .about_3, .about_4, .about_gio'
+    });
+  }, [])
 
   return (
     <div>
