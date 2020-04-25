@@ -56,6 +56,121 @@ a {
   }
 }
 
+@-webkit-keyframes giantizeAnim {
+  0% {
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+  }
+  100% {
+    width: 800px;
+    height: 800px;
+    opacity: 0;
+  }
+}
+
+@keyframes giantizeAnim {
+  0% {
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+  }
+  100% {
+    width: 800px;
+    height: 800px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes opacityDownAnim {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes opacityDownAnim {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.landingscreen {
+  z-index: 100;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: #2e4b29;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  visibility: visible;
+  -webkit-animation: opacityDownAnim 1s forwards 2s ease-in-out;
+          animation: opacityDownAnim 1s forwards 2s ease-in-out;
+}
+
+.landingscreen .spinner {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: auto;
+  -webkit-animation: giantizeAnim 1s forwards 2s ease-in-out;
+          animation: giantizeAnim 1s forwards 2s ease-in-out;
+}
+
+.landingscreen .double-bounce1, .landingscreen .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.landingscreen .double-bounce2 {
+  background-color: #436c3b;
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
 header {
   position: fixed;
   z-index: 20;
@@ -78,8 +193,9 @@ header nav ul {
   display: grid;
   height: 100%;
   margin: 0;
-  -webkit-animation: opacityAnim 1s forwards 0s ease-in-out;
-          animation: opacityAnim 1s forwards 0s ease-in-out;
+  opacity: 0;
+  -webkit-animation: opacityAnim 1s forwards 3s ease-in-out;
+          animation: opacityAnim 1s forwards 3s ease-in-out;
   padding-left: 3vh;
   padding-top: 18vh;
   -ms-grid-rows: (18vh)[4];
@@ -134,8 +250,9 @@ header .links {
   position: fixed;
   right: 30px;
   top: 0;
-  -webkit-animation: opacityAnim 1s forwards 0s ease-in-out;
-          animation: opacityAnim 1s forwards 0s ease-in-out;
+  opacity: 0;
+  -webkit-animation: opacityAnim 1s forwards 3s ease-in-out;
+          animation: opacityAnim 1s forwards 3s ease-in-out;
 }
 
 header .links ul {
@@ -183,8 +300,9 @@ header .links li img:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: opacityAnim 1.5s forwards 0s ease;
-          animation: opacityAnim 1.5s forwards 0s ease;
+  opacity: 0;
+  -webkit-animation: opacityAnim 1.5s forwards 2s ease;
+          animation: opacityAnim 1.5s forwards 2s ease;
 }
 
 .hero img {
@@ -218,8 +336,8 @@ header .links li img:hover {
           transform: translateY(0);
   z-index: 7;
   opacity: 0;
-  -webkit-animation: opacityAnim 1.5s forwards 1.25s ease-in-out;
-          animation: opacityAnim 1.5s forwards 1.25s ease-in-out;
+  -webkit-animation: opacityAnim 1.5s forwards 4.25s ease-in-out;
+          animation: opacityAnim 1.5s forwards 4.25s ease-in-out;
   text-shadow: 0px 15px 5px rgba(0, 0, 0, 0.1), 10px 20px 5px rgba(0, 0, 0, 0.05), -10px 20px 5px rgba(0, 0, 0, 0.05);
 }
 
@@ -232,10 +350,10 @@ header .links li img:hover {
   position: absolute;
   color: #cfcfcf;
   font-size: 2em;
-  padding-bottom: 210px;
-  opacity: 1;
-  -webkit-animation: opacityTranslateAnim 2s forwards 0s ease;
-          animation: opacityTranslateAnim 2s forwards 0s ease;
+  padding-bottom: 0px;
+  opacity: 0;
+  -webkit-animation: opacityTranslateAnim 2s forwards 3s ease;
+          animation: opacityTranslateAnim 2s forwards 3s ease;
 }
 
 .hero .middlegrass {
@@ -425,6 +543,23 @@ header .links li img:hover {
           transition-delay: 1.6s;
 }
 
+.works {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #3D613A;
+}
+
 .kodama-section {
   position: relative;
   -webkit-animation: opacityAnim 1.5s forwards 0s ease;
@@ -478,22 +613,5 @@ header .links li img:hover {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.movies {
-  position: relative;
-  width: 100%;
-  height: 60vh;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #3D613A;
 }
 /*# sourceMappingURL=main.css.map */

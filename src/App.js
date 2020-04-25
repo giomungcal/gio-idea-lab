@@ -68,7 +68,7 @@ const App = () => {
   }
 
   const lowGrassStyle = {
-    transform: "translateY(" + scroll * .1 + "px)"
+    transform: "translate3d(" + scroll * .01 + "px, " + scroll * .52 +"px, 0px)"
   }
 
   const treeStyle = {
@@ -95,6 +95,13 @@ const App = () => {
 
   return (
     <React.Fragment>
+      <div className="landingscreen">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+      </div>
+
       <header>
         <nav className="navbar" style={ nav ?  showNav : hideNav }>
               <ul>
@@ -136,7 +143,9 @@ const App = () => {
           <span className="about_gio">-gio mungcal</span>
       </div>
 
-      <div className="movies"></div>
+      <div className="works">
+        <h1>works</h1>
+      </div>
 
       <div className="kodama-section">
         {/* <img className="kodama-convoy" src={kodama} alt="kodama" style={kodamaStyle} /> */}
