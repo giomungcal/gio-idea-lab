@@ -11,6 +11,8 @@ import middlegrass from './imgs/middlegrass.png'
 import tree from './imgs/tree.png'
 import forest from './imgs/forest.png'
 
+import kodama from './imgs/kodama.png'
+
 const App = () => {
 
   // Handles display of side navbar
@@ -31,7 +33,6 @@ const App = () => {
 
   const handleNav = () => {
     setNav(!nav);
-    console.log(nav);
   }
 
   // Scroll Parallax 
@@ -40,55 +41,60 @@ const App = () => {
 
   const scrollListener = () => {
     setScroll(window.scrollY);
-    console.log(scroll);
   }
 
   useEffect(() => {
     window.addEventListener('scroll', scrollListener )
-
+    console.log(scroll)
     return () => {
       window.removeEventListener('scroll', scrollListener )
     }
   }, [scroll])
 
-  let idealabStyle = {
+  const idealabStyle = {
     transform: "translateY(" + scroll * .65 + "px)"
   }
 
-  let forestStyle = {
+  const forestStyle = {
     transform: "translateY(" + scroll * .5 + "px)"
   }
 
-  let midGrassStyle = {
+  const midGrassStyle = {
     transform: "translate3d(" + -scroll * .03 + "px, " + scroll * .5 +"px, 0px)"
   }
 
-  let smallGrassStyle = {
+  const smallGrassStyle = {
     transform: "translate3d(" + scroll * .12 + "px, " + scroll * .65 +"px, 0px)"
   }
 
-  let lowGrassStyle = {
-    transform: "translateY(" + scroll * .6 + "px)"
+  const lowGrassStyle = {
+    transform: "translateY(" + scroll * .1 + "px)"
   }
 
-  let treeStyle = {
+  const treeStyle = {
     transform: "translateY(" + scroll * .5 + "px)"
   }
 
-  let gioStyle = {
+  const gioStyle = {
     transform: "translate3d(" + -scroll * .12 + "px, " + scroll * .68 +"px, 0px)"
+  }
+
+  // const [ kodamaStyle, setKodamaStyle ] = useState({ top: 0 })
+  
+  let kodamaStyle = {
+    transform: "translateY(" + (-scroll + 1050) * .5 + "px)"
   }
 
   // Scroll-out effect
 
   useEffect(() => {
     ScrollOut({
-      targets: '.quotes, .about_1, .about_2, .about_3, .about_4, .about_gio'
+      targets: '.quotes, .about_1, .about_2, .about_3, .about_4, .about_gio, .kodama-section'
     });
   }, [])
 
   return (
-    <div>
+    <React.Fragment>
       <header>
         <nav className="navbar" style={ nav ?  showNav : hideNav }>
               <ul>
@@ -128,9 +134,17 @@ const App = () => {
           <span className="about_3">my skills in web designing</span>
           <span className="about_4">and development.</span>
           <span className="about_gio">-gio mungcal</span>
-       </div>
+      </div>
+
+      <div className="movies"></div>
+
+      <div className="kodama-section">
+        {/* <img className="kodama-convoy" src={kodama} alt="kodama" style={kodamaStyle} /> */}
+      </div>
+
       
-    </div>
+      
+    </React.Fragment>
   );
 }
 

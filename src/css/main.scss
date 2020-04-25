@@ -20,11 +20,13 @@ a{
 
 @keyframes opacityTranslateAnim{
     0%{
-        transform: translateY(60px);
+        // transform: translateY(60px);
+        padding-bottom: 0px;
         opacity: 0;
     }
     100%{
-        transform: translateY(0);
+        // transform: translateY(0);
+        padding-bottom: 210px;
         opacity: 1;
     }
 }
@@ -180,7 +182,11 @@ header{
         transform: translateY(0);
         z-index: 7;
         opacity: 0;
-        animation: opacityAnim 2s forwards 1.25s ease-in-out;
+        animation: opacityAnim 1.5s forwards 1.25s ease-in-out;
+
+        text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                     10px 20px 5px rgba(0,0,0,0.05),
+                    -10px 20px 5px rgba(0,0,0,0.05);
 
         span{
             color: $green;
@@ -196,7 +202,7 @@ header{
         padding-bottom: 210px;
         opacity: 1;
 
-        animation: opacityAnim 2s forwards 0s ease;
+        animation: opacityTranslateAnim 2s forwards 0s ease;
 
     }
 
@@ -357,4 +363,78 @@ header{
             transition-delay: 1.6s;
         }
     }
+}
+
+.kodama-section{
+    position: relative;
+    // width: 100%;
+    // height: 50vh;
+    // overflow: hidden;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+
+    animation: opacityAnim 1.5s forwards 0s ease;
+
+        /* The image used */
+    background-image: url("../imgs/kodama.png");
+
+    /* Set a specific height */
+    height: 40vh;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: 1s;
+
+    &[data-scroll="in"]{
+        opacity: 1;
+    }
+
+    &:before{
+        content: '';
+        z-index: 20;
+        position: absolute;
+        top:0;
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(to bottom, #3D613A, transparent);
+        z-index: 15;
+    }
+
+    &:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(to top, #202224, transparent);
+        z-index: 15;
+    }
+
+    .kodama-convoy{
+        position: fixed;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.movies{
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #3D613A;
+
 }
