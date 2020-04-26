@@ -1,4 +1,4 @@
-# idea-lab
+# :leaves: idea-lab
 _an exposition of the personality of gio_ 
 by `gio mungcal`
 
