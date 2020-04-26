@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/idea-lab/static/css/main.d43c71fa.chunk.css",
+    "main.css": "/idea-lab/static/css/main.19afb0f1.chunk.css",
     "main.js": "/idea-lab/static/js/main.c1d5e5cd.chunk.js",
     "main.js.map": "/idea-lab/static/js/main.c1d5e5cd.chunk.js.map",
     "runtime-main.js": "/idea-lab/static/js/runtime-main.8b3df154.js",
@@ -8,9 +8,9 @@
     "static/js/2.854cfc77.chunk.js": "/idea-lab/static/js/2.854cfc77.chunk.js",
     "static/js/2.854cfc77.chunk.js.map": "/idea-lab/static/js/2.854cfc77.chunk.js.map",
     "index.html": "/idea-lab/index.html",
-    "precache-manifest.53fcc1814917804dfba83b1aca431d70.js": "/idea-lab/precache-manifest.53fcc1814917804dfba83b1aca431d70.js",
+    "precache-manifest.e93719244544926e932a98f7f06bfee9.js": "/idea-lab/precache-manifest.e93719244544926e932a98f7f06bfee9.js",
     "service-worker.js": "/idea-lab/service-worker.js",
-    "static/css/main.d43c71fa.chunk.css.map": "/idea-lab/static/css/main.d43c71fa.chunk.css.map",
+    "static/css/main.19afb0f1.chunk.css.map": "/idea-lab/static/css/main.19afb0f1.chunk.css.map",
     "static/js/2.854cfc77.chunk.js.LICENSE.txt": "/idea-lab/static/js/2.854cfc77.chunk.js.LICENSE.txt",
     "static/media/cedula1.png": "/idea-lab/static/media/cedula1.e6ebad8f.png",
     "static/media/cedula2.png": "/idea-lab/static/media/cedula2.5a90bb09.png",
@@ -33,7 +33,7 @@
   "entrypoints": [
     "static/js/runtime-main.8b3df154.js",
     "static/js/2.854cfc77.chunk.js",
-    "static/css/main.d43c71fa.chunk.css",
+    "static/css/main.19afb0f1.chunk.css",
     "static/js/main.c1d5e5cd.chunk.js"
   ]
 }

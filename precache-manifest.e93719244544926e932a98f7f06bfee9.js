@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "541b228cc07812a91b2e579cabe1dfe5",
+    "revision": "5ee4aa474f2fe104080e944faeacf452",
     "url": "/idea-lab/index.html"
   },
   {
-    "revision": "4f03c96f373b2cc418a5",
-    "url": "/idea-lab/static/css/main.d43c71fa.chunk.css"
+    "revision": "23c82ce75f9b4e31e979",
+    "url": "/idea-lab/static/css/main.19afb0f1.chunk.css"
   },
   {
     "revision": "6859a0140a203cfe4ef5",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/idea-lab/static/js/2.854cfc77.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4f03c96f373b2cc418a5",
+    "revision": "23c82ce75f9b4e31e979",
     "url": "/idea-lab/static/js/main.c1d5e5cd.chunk.js"
   },
   {
