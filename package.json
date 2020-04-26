@@ -11,16 +11,15 @@
     "react-dom": "^16.13.1",
     "react-script-tag": "^1.1.2",
     "react-scripts": "3.4.1",
-    "react-scroll-parallax": "^2.3.2",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "scroll-out": "^2.2.8"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,5 +35,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }

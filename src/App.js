@@ -11,6 +11,21 @@ import middlegrass from './imgs/middlegrass.png'
 import tree from './imgs/tree.png'
 import forest from './imgs/forest.png'
 
+// Works
+import ek1 from './imgs/ek1.jpg'
+import ek2 from './imgs/ek2.jpg'
+import ek3 from './imgs/ek3.jpg'
+import ek4 from './imgs/ek4.jpg'
+import ek5 from './imgs/ek5.jpg'
+
+import cedula1 from './imgs/cedula1.png'
+import cedula2 from './imgs/cedula2.png'
+import cedula3 from './imgs/cedula3.png'
+
+import portfolio1 from './imgs/portfolio1.png'
+import portfolio2 from './imgs/portfolio2.png'
+import portfolio3 from './imgs/portfolio3.png'
+
 import kodama from './imgs/kodama.png'
 
 const App = () => {
@@ -89,17 +104,17 @@ const App = () => {
 
   useEffect(() => {
     ScrollOut({
-      targets: '.quotes, .about_1, .about_2, .about_3, .about_4, .about_gio, .kodama-section'
+      targets: '.quotes, .about_1, .about_2, .about_3, .about_4, .about_gio, .kodama-section, .works-header, .works-section, .screens, .works-tile--header'
     });
   }, [])
 
   return (
     <React.Fragment>
       <div className="landingscreen">
-      <div class="spinner">
-        <div class="double-bounce1"></div>
-        <div class="double-bounce2"></div>
-      </div>
+        <div class="spinner">
+          <div class="double-bounce1"></div>
+          <div class="double-bounce2"></div>
+        </div>
       </div>
 
       <header>
@@ -107,7 +122,7 @@ const App = () => {
               <ul>
                   <li><span onClick={handleNav}>hide</span></li>
                   <li><a href="#home">interests</a></li>
-                  <li><a href="#about">about</a></li>
+                  <li><a href="#works">works</a></li>
                   <li><a href="#home">home</a></li>
               </ul>
           </nav>
@@ -137,14 +152,57 @@ const App = () => {
       <div className="about" id="about">
           <span className="quotes">"</span>
           <span className="about_1">I created this page as a way</span>
-          <span className="about_2">to constantly showcase</span>
+          <span className="about_2">to constantly exhibit</span>
           <span className="about_3">my skills in web designing</span>
           <span className="about_4">and development.</span>
           <span className="about_gio">-gio mungcal</span>
       </div>
 
-      <div className="works">
-        <h1>works</h1>
+      <div className="works" id="works">
+        <div className="works-header"><h1>works</h1></div>
+        <section className="works-section">
+          <div className="works-tile">
+            <div className="works-tile--header">
+              <h2 className="project-title">electro<br/>knight</h2>
+              <a href="">repo</a>
+            </div>
+            <div className="works-tile--screens">
+              <figure>
+                <img className="screens" src={ek1} alt="ek1"/>
+                <img className="screens" src={ek2} alt="ek2"/>
+                <img className="screens" src={ek3} alt="ek3"/>
+                <img className="screens" src={ek4} alt="ek4"/>
+                <img className="screens" src={ek5} alt="ek5"/>
+              </figure>
+            </div>
+          </div>
+          <div className="works-tile">
+            <div className="works-tile--header">
+              <h2 className="project-title">cedula<br/>application</h2>
+              <a href="">repo</a>
+            </div>
+            <div className="works-tile--screens">
+              <figure>
+                <img className="screens" src={cedula1} alt="cedula"/>
+                <img className="screens" src={cedula2} alt="cedula"/>
+                <img className="screens" src={cedula3} alt="cedula"/>
+              </figure>
+            </div>
+          </div>
+          <div className="works-tile">
+            <div className="works-tile--header">
+              <h2 className="project-title">my-<br/>portfolio</h2>
+              <a href="">repo</a>
+            </div>
+            <div className="works-tile--screens">
+              <figure>
+                <img className="screens" src={portfolio1} alt="portfolio"/>
+                <img className="screens" src={portfolio2} alt="portfolio"/>
+                <img className="screens" src={portfolio3} alt="portfolio"/>
+              </figure>
+            </div>
+          </div>
+        </section>
       </div>
 
       <div className="kodama-section">
