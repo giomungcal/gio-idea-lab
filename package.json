@@ -2,6 +2,7 @@
   "name": "gio-idea-lab",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://giomungcal.github.io/idea-lab",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -11,6 +12,8 @@
     "react-script-tag": "^1.1.2",
     "react-scripts": "3.4.1",
     "react-scroll-parallax": "^2.3.2",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "scroll-out": "^2.2.8"
   },
   "scripts": {
