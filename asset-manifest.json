@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/idea-lab/static/css/main.bc5a8092.chunk.css",
+    "main.js": "/idea-lab/static/js/main.42896153.chunk.js",
+    "main.js.map": "/idea-lab/static/js/main.42896153.chunk.js.map",
+    "runtime-main.js": "/idea-lab/static/js/runtime-main.8b3df154.js",
+    "runtime-main.js.map": "/idea-lab/static/js/runtime-main.8b3df154.js.map",
+    "static/js/2.7b89788c.chunk.js": "/idea-lab/static/js/2.7b89788c.chunk.js",
+    "static/js/2.7b89788c.chunk.js.map": "/idea-lab/static/js/2.7b89788c.chunk.js.map",
+    "index.html": "/idea-lab/index.html",
+    "precache-manifest.55faa8105de8c8b0d34a6144773c5faf.js": "/idea-lab/precache-manifest.55faa8105de8c8b0d34a6144773c5faf.js",
+    "service-worker.js": "/idea-lab/service-worker.js",
+    "static/css/main.bc5a8092.chunk.css.map": "/idea-lab/static/css/main.bc5a8092.chunk.css.map",
+    "static/js/2.7b89788c.chunk.js.LICENSE.txt": "/idea-lab/static/js/2.7b89788c.chunk.js.LICENSE.txt",
+    "static/media/forest.png": "/idea-lab/static/media/forest.bfa9a1bc.png",
+    "static/media/kodama.png": "/idea-lab/static/media/kodama.b7f3aa1d.png",
+    "static/media/lowgrass.png": "/idea-lab/static/media/lowgrass.136f8e55.png",
+    "static/media/middlegrass.png": "/idea-lab/static/media/middlegrass.3b0a0301.png",
+    "static/media/smallgrass.png": "/idea-lab/static/media/smallgrass.3a3c2b7f.png",
+    "static/media/tree.png": "/idea-lab/static/media/tree.a19f3e08.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8b3df154.js",
+    "static/js/2.7b89788c.chunk.js",
+    "static/css/main.bc5a8092.chunk.css",
+    "static/js/main.42896153.chunk.js"
+  ]
+}
